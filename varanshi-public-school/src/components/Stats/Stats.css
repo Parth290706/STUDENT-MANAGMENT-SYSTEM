@@ -1,0 +1,333 @@
+.stats{
+    width:100%;
+    padding:90px 0;
+
+    background:linear-gradient(
+        180deg,
+        #111827,
+        #0F172A
+    );
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* ==========================
+   Background Glow
+========================== */
+
+.stats::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(245,158,11,.10);
+
+    filter:blur(120px);
+
+    top:-120px;
+    left:-120px;
+
+    animation:floatGlow 8s ease-in-out infinite;
+
+}
+
+.stats::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.08);
+
+    filter:blur(120px);
+
+    bottom:-120px;
+    right:-120px;
+
+    animation:floatGlow2 10s ease-in-out infinite;
+
+}
+
+/* ==========================
+   Container
+========================== */
+
+.stats-container{
+
+    position:relative;
+    z-index:2;
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+/* ==========================
+   Card
+========================== */
+
+.stat-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#1E293B;
+
+    padding:40px 25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s ease;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* Top Gradient Border */
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #F59E0B,
+        #F97316,
+        #3B82F6
+    );
+
+}
+
+/* Glow Effect */
+
+.stat-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(245,158,11,.12);
+
+    filter:blur(70px);
+
+    top:-80px;
+    right:-70px;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.stat-card:hover::after{
+
+    opacity:1;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-12px) scale(1.03);
+
+    background:#243447;
+
+    box-shadow:0 25px 55px rgba(245,158,11,.18);
+
+}
+
+/* ==========================
+   Icon
+========================== */
+
+.stat-icon{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+
+    margin:auto;
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.stat-card:hover .stat-icon{
+
+    transform:rotate(10deg) scale(1.1);
+
+    box-shadow:0 0 30px rgba(245,158,11,.45);
+
+}
+
+/* ==========================
+   Number
+========================== */
+
+.stat-card h2{
+
+    font-size:42px;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================
+   Text
+========================== */
+
+.stat-card p{
+
+    color:#CBD5E1;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   Animations
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatGlow{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(30px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatGlow2{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(-30px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.stats-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.stats-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}

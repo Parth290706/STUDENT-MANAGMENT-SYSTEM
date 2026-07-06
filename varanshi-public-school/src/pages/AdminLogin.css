@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+.admin-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(10,20,40,.75),rgba(10,20,40,.75)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.admin-card{
+
+    width:430px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    text-align:center;
+
+    animation:fadeIn .6s ease;
+}
+
+.admin-logo{
+
+    width:85px;
+    height:85px;
+
+    background:#ffd000;
+
+    color:#111;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    font-size:35px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 10px 25px rgba(255,208,0,.45);
+}
+
+.admin-card h2{
+
+    color:#fff;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+}
+
+.admin-card p{
+
+    color:#d7d7d7;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+}
+
+.input-group{
+
+    position:relative;
+
+    margin-bottom:22px;
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.16);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.35s;
+}
+
+.input-group input::placeholder{
+
+    color:#dcdcdc;
+}
+
+.input-group input:focus{
+
+    background:rgba(255,255,255,.25);
+
+    box-shadow:0 0 0 3px rgba(255,208,0,.35);
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ffd000;
+
+    color:#111;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.login-btn:hover{
+
+    background:#ffb400;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(255,208,0,.45);
+}
+
+.back-link{
+
+    margin-top:22px;
+}
+
+.back-link a{
+
+    color:white;
+
+    text-decoration:none;
+
+    opacity:.8;
+
+    transition:.3s;
+}
+
+.back-link a:hover{
+
+    opacity:1;
+
+    color:#ffd000;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:500px){
+
+.admin-card{
+
+    width:90%;
+
+    padding:35px 25px;
+}
+
+}

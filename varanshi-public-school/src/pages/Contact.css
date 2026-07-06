@@ -1,0 +1,314 @@
+/* ==========================
+   Contact Page
+========================== */
+
+.contact{
+
+    background:#0F172A;
+
+    min-height:100vh;
+
+    padding-bottom:80px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================
+   Main Container
+========================== */
+
+.contact-container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:70px auto 0;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+/* ==========================
+   Contact Info
+========================== */
+
+.contact-info{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#1E293B;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+
+.contact-info::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #F59E0B,
+        #F97316,
+        #3B82F6
+    );
+
+}
+
+.contact-info:hover{
+
+    transform:translateY(-10px);
+
+    background:#243447;
+
+    box-shadow:0 25px 60px rgba(245,158,11,.18);
+
+}
+
+.contact-info h2{
+
+    color:#ffffff;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   Contact Details
+========================== */
+
+.info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+    color:#CBD5E1;
+
+    line-height:1.7;
+
+}
+
+.info svg{
+
+    width:55px;
+    height:55px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    transition:.35s;
+
+}
+
+.contact-info:hover .info svg{
+
+    transform:rotate(10deg) scale(1.08);
+
+    box-shadow:0 0 25px rgba(245,158,11,.35);
+
+}
+
+/* ==========================
+   Contact Form
+========================== */
+
+.contact-form{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#1E293B;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+
+.contact-form::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #3B82F6,
+        #F59E0B,
+        #F97316
+    );
+
+}
+
+.contact-form:hover{
+
+    transform:translateY(-10px);
+
+    background:#243447;
+
+    box-shadow:0 25px 60px rgba(245,158,11,.18);
+
+}
+
+.contact-form h2{
+
+    color:#ffffff;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   Form
+========================== */
+
+.contact-form form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    background:#0F172A;
+
+    color:#ffffff;
+
+    padding:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:10px;
+
+    transition:.35s;
+
+    font-size:15px;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    outline:none;
+
+    border-color:#F59E0B;
+
+    box-shadow:0 0 0 4px rgba(245,158,11,.18);
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+.contact-form button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(245,158,11,.35);
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}

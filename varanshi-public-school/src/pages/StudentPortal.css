@@ -1,0 +1,172 @@
+/* ==========================
+   Portal Page
+========================== */
+
+.portal{
+
+    background:#0F172A;
+    min-height:100vh;
+
+}
+
+/* ==========================
+   Login Box
+========================== */
+
+.login-box{
+
+    width:400px;
+    max-width:90%;
+
+    margin:60px auto 0;   /* Top | Left-Right | Bottom */
+
+    background:#1E293B;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+.login-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 60px rgba(245,158,11,.15);
+}
+
+/* ==========================
+   Icon
+========================== */
+
+.student-icon{
+
+    width:90px;
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:white;
+
+    font-size:40px;
+
+    transition:.4s;
+
+}
+
+.login-box:hover .student-icon{
+
+    transform:rotate(10deg) scale(1.08);
+
+    box-shadow:0 0 30px rgba(245,158,11,.4);
+
+}
+
+.login-box h2{
+
+    color:#ffffff;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+   Form
+========================== */
+
+.login-box form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.login-box input{
+
+    background:#0F172A;
+
+    color:#ffffff;
+
+    padding:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:10px;
+
+    transition:.35s;
+
+}
+
+.login-box input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.login-box input:focus{
+
+    outline:none;
+
+    border-color:#F59E0B;
+
+    box-shadow:0 0 0 4px rgba(245,158,11,.18);
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+.login-box button{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.login-box button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(245,158,11,.35);
+
+}
