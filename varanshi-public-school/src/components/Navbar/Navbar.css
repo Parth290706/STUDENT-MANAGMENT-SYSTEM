@@ -195,19 +195,101 @@
    RESPONSIVE
 =========================== */
 
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+
 @media(max-width:950px){
 
+    .nav-container{
+        width:94%;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
     .nav-links{
-        display:none;
+
+        position:fixed;
+
+        top:80px;
+        left:-100%;
+
+        width:270px;
+        height:calc(100vh - 80px);
+
+        background:#0F172A;
+
+        display:flex;
+        flex-direction:column;
+
+        gap:0;
+
+        padding:25px 0;
+
+        transition:.35s ease;
+
+        box-shadow:10px 0 30px rgba(0,0,0,.35);
+    }
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .nav-links li{
+        width:100%;
+    }
+
+    .nav-links a{
+
+        display:block;
+
+        width:100%;
+
+        padding:18px 28px;
+
+        border-bottom:1px solid rgba(255,255,255,.05);
+    }
+
+    .nav-links a:hover{
+
+        background:rgba(245,158,11,.12);
+
     }
 
     .apply-btn{
-        padding:12px 20px;
+        display:none;
     }
-
 }
 
 @media(max-width:600px){
+
+    .navbar{
+        height:70px;
+    }
+
+    .nav-links{
+        top:70px;
+        height:calc(100vh - 70px);
+    }
+
+    .logo{
+        gap:10px;
+    }
+
+    .logo-icon{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
 
     .logo-text h2{
         font-size:18px;
@@ -217,10 +299,7 @@
         font-size:11px;
     }
 
-    .logo-icon{
-        width:42px;
-        height:42px;
-        font-size:18px;
+    .menu-btn{
+        font-size:26px;
     }
-
 }
